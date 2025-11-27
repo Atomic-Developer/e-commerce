@@ -1,0 +1,130 @@
+/* Reset e estilo base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: aliceblue;
+  background-color: rgb(12, 10, 24);
+}
+
+/* Bloco de imagem de fundo */
+.imagem_sobre_nos {
+  background-image: url("../static/imagem_oceano_sobre_nos.jpg"); 
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 450px;
+  width: 100%;
+  margin: 50px auto;
+  max-width: 1000px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Texto geral */
+.texto {
+  padding: 50px;
+  font-size: 1.875rem; /* 30px */
+  background-color: rgb(12, 10, 24);
+  color: aliceblue;
+  max-width: 900px;
+  width: 90%;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 100px;
+}
+
+h2 {
+  margin-top: 80px;
+  margin-bottom: 20px;
+}
+
+h5 {
+  margin-bottom: 50px;
+  font-weight: normal;
+  font-size: 1.25rem;
+}
+
+hr {
+  margin-bottom: 40px;
+  border: 1px solid aliceblue;
+}
+
+
+.empresas-icons {
+  display: flex;
+  width: 100%;
+  max-width: 300px;
+  height: 300px;
+  background-color: aliceblue;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px; 
+}
+
+.empresas-icons img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+.empresas_parceiras {
+  margin: 80px auto 50px auto;
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  opacity: 0;
+  filter: blur(15px);
+  transition: all 2s;
+}
+
+.empresas_parceiras_visiveis {
+  opacity: 1;
+  filter: blur(0px);
+  transition: all 3s;
+}
+
+
+@media (max-width: 768px) {
+  .texto {
+    padding: 30px;
+    font-size: 1.25rem;
+  }
+
+  .imagem_sobre_nos {
+    height: 300px;
+  }
+
+  .empresas-icons {
+    height: 250px;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .texto {
+    font-size: 1.1rem;
+    padding: 20px;
+  }
+
+  .imagem_sobre_nos {
+    height: 250px;
+  }
+
+  .empresas-icons {
+    height: 200px;
+  }
+}

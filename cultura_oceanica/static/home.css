@@ -1,0 +1,14 @@
+h1{
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 45px;
+    text-align: center;
+    align-items: center;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}

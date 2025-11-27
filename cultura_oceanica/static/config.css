@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.nav-list a {
+  background-color: rgb(0, 131, 218);
+  color: white;
+  border: none;
+  font-size: 16px;
+  padding: 10px 20px;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+
+body {
+  color: aliceblue;
+  background-color: rgb(12, 10, 24);
+  overflow-x: hidden;
+}
+
+.cabecalho {
+  background-color: rgb(0, 131, 218);
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+
+.cabecalho button {
+  background-color: rgb(0, 131, 218);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 20px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-list li {
+  letter-spacing: 3px;
+}
+
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.mobile-menu div {
+  width: 32px;
+  height: 2px;
+  background-color: aliceblue;
+  margin: 8px;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 999px) {
+  .nav-list {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50vw;
+    height: 100vh;
+    background: rgb(0, 131, 218);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
+    z-index: 999;
+  }
+
+  .nav-list li {
+    opacity: 0;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  .nav-list.active {
+    transform: translateX(0);
+  }
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+  opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -7px);
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 450px;
+  object-fit: contain;
+  background-color: #011f57;
+}
+
+#carouselExampleInterval {
+  width: 60%;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.cabecalho {
+  position: relative;
+  z-index: 2000;
+}
+
+
+.carousel {
+  position: relative;
+  z-index: 1;
+}
