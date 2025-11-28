@@ -1,0 +1,39 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Marca</th>
+      <th scope="col">Preço</th>
+      <th scope="col">Categoria</th> 
+      <th scope="col">Imagem</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for produto in produtos %}
+    <tr>
+      <th scope="row">{{ loop.index }}</th>  
+      <td>{{ produto.nome }}</td>
+      <td>{{ produto.marca }}</td>
+      <td>R$ {{ produto.preco_unitario }}</td>
+      <td>{{ produto.categoria }}</td> 
+      <td>
+        <img src="{{ url_for('static', filename=produto.foto) }}" width="150px">
+      </td>
+
+<td>
+<button 
+  c-delete="/delete/prod?id={{ produto.id }}"
+  c-self-remove="true"
+  class="btn btn-danger"
+  c-redirect="/criar_produto">
+  
+    Deletar produto
+</button>
+
+</td>
+
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>

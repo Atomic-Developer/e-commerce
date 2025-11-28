@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../static/config.css">
+
+</head>
+<body>
+
+
+
+
+
+
+
+  
+  
+
+  <div class="cabecalho">
+
+    <h1>OCEAN STORE</h1>
+    
+  <div class="mobile-menu">
+    <div class="line1"></div>
+    <div class="line2"></div>
+    <div class="line3"></div>
+  </div>
+
+
+
+<ul class="nav-list">
+
+
+  <li><button c-get="/sobre" c-target=".site" c-callback="executarAnimacaoSobreNos">SOBRE NÓS</button></li>
+
+  <li><button c-get="/home" c-target=".site">HOME</button></li>
+
+  <li><button c-get="/prod" c-target=".site">PRODUTOS</button></li>
+
+  <li><a href="/perfil">PERFIL</a></li>
+
+</ul>
+
+<main></main>
+<script src="../static/haburguer-nav.js"></script>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<script src="{{ url_for('static', filename='cru.js') }}"></script>
+
+
+
+<div class="site" >
+    {% include 'home.html' %}
+</div>
+
+<script src="{{ url_for('static', filename='animacao.js') }}"></script>
+
+
+</body>
+</html>
+
+
+
+
