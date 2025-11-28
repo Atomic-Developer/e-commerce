@@ -21,3 +21,7 @@ python main.py
 Quando o servidor iniciar, acesse o projeto através do navegador utilizando o seguinte endereço:
 
 👉 http://127.0.0.1:5000/
+
+
+📍foi usada uma biblioteca inspirada no htmx:
+cru.js  : https://github.com/Iazzetta/cru.js
